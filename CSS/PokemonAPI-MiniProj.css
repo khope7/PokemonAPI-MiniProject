@@ -1,0 +1,27 @@
+/* Using image for webpage and card backgrounds */
+body {
+    background-image: url(../Pictures/PokemonBannerImg.avif);
+}
+
+#card{
+    background-image: url(../Pictures/PokemonBckgrndImg.avif);
+}
+
+/* Adjusting for search button along with hover functionality */
+#mainbutton{
+    background-color: darkgray;
+    color: white;
+    border-color: red;
+}
+
+#mainbutton:hover {
+    background-color: white;
+    border-color: gray;
+    color: red;
+}
+
+
+
+#findButton:hover {
+    cursor: not-allowed;
+}

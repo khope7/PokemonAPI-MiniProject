@@ -1,0 +1,112 @@
+<!-- Linking google fonts for font inclusion -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&family=Grechen+Fuemen&family=Iceberg&family=Press+Start+2P&family=Rubik+Distressed&display=swap" rel="stylesheet">
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>PokeSearch SearchDex</title>
+        <script src="../Scripts/Search.js" defer></script>
+        <link rel="stylesheet" href="../CSS/Search.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </head>
+    <body id="searchPage">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <h2 class="navbar-brand">Search Nav</h2>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../PokemonAPI-MiniProj.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Search.html">PokeSearch</a>
+                            </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="Details.html">Details</a>
+                        <li class="nav-item">
+                        <a class="nav-link text-success" href="#About Us">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link text-success" href="#Contact Info">Contact Info</a>
+                        </li>                                    
+                </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="bg-image d-flex flex-column my-5 justify-content-center align-items-center" style="background-image: url('../Pictures/PokemonSrchBnnerImg.avif'); height: 30vh;">
+            <h1 class="text-white">Pokemon SearchDex</h1>
+            <h4 class="text-white">Welcome to the Pokemon Search PokeDex!</h4>
+            </div>
+                
+
+        <h3 class="container-fluid justify-content-center text-light d-flex">Find your Pokemon!:</h3>
+
+        <form id="pokemonForm" class="container">
+            <label for="pokeName"><h4 id="searchText" class="mt-4">Enter your PokeSearch Here:</h4></label>
+            <input class="form-control bg-transparent text-light" type="text" id="pokeName" name="pokeName" required><br>
+            </select>
+            <button id="searchBtn" class="rounded bg-transparent" type="submit">Search!</button>
+        </form>
+
+        <div id="About Us" class="container pt-2 text-light my-5">
+            <section id="about" class="my-5">
+                <h2 class="text-light p-2">About us</h2>
+
+                <div class="container row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col-12 col-md-4">
+                        <div>
+                            <h5 class="text-light">Side-Info</h5>
+                            <p class="text-light">Information regarding the company.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-8 mb-5">
+                        <div>
+                            <h5 class="text-light">Main-Info</h5>
+                            <p class="text-light">Information regarding this webpage.</p>
+                        </div>
+                    </div>              
+                </div>
+            </section>
+
+        </div>
+
+    <hr class="mt-6">
+
+    <footer id="Contact Info" class="mx-2 py-3 mt-5 bg-dark">
+        <div class="row row-cols-1 row-cols-md-3 g-4 px-2">
+            <div class="col">
+                <div>
+                    <h6 class="text-light">Contact Info</h6>
+                    <p class="text-light">This is the contact info.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    <h6 class="text-light">Social Media Links</h6>
+                    <p class="text-light">These are the social media links.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    <h6 class="text-light">Newspaper signup form</h6>
+                    <p class="text-light">This is the Newspaper signup form.</p>
+                </div>
+            </div>                    
+        </div>
+
+        <div class="my-5 px-2">
+            <p class="text-light">&copy; 2025 PokeSearch Webpage. All rights reserved</p>
+            <address class="text-light"><i>Image References: https://unsplash.com/</i></address>
+            <address class="text-light"><i>Font References: https://fonts.google.com/</i></address>
+        </div>
+    </footer>       
+</html>

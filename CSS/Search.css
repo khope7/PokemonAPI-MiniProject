@@ -1,0 +1,21 @@
+/* Adding image to search page background */
+#searchPage {
+    background-image: url(../Pictures/PokemonSrchBckgrndImg.avif);
+}
+
+/* Applying gradient to search button along with hover functionalty for user interaction */
+#searchBtn{
+    background-image: linear-gradient(to bottom right, rgba(25, 168, 33, 0.226), rgba(255, 255, 0, 0.151));
+    color: rgba(185, 235, 69, 0.671);
+    font-family: "Fontdiner Swanky", serif;
+}
+
+#searchBtn:hover {
+    font-size: large;
+}
+
+/* Applying additional font adjustments along with bootstrap formatting */
+#searchText{
+    color: rgba(255, 238, 0, 0.212);
+    font-family: "Rubik Distressed";
+}

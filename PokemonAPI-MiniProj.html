@@ -1,0 +1,183 @@
+<!--
+In this PokeAPI Integration project, you'll develop a web application that seamlessly integrates with the PokeAPI,
+providing users with an immersive experience into the world of Pokémon. Leveraging HTML, Bootstrap, CSS, and JavaScript,
+you'll create a dynamic and interactive platform for exploring Pokémon data and information.
+
+Project Requirements
+
+Homepage:
+Design a visually appealing landing page with Bootstrap components and custom CSS styles.
+Implement responsive design principles to ensure compatibility across various devices and screen sizes.
+Pokémon Search Page:
+Create a search page where users can enter a Pokémon's name or ID to retrieve relevant information.
+Utilize JavaScript to fetch data from the PokeAPI and dynamically update the webpage content based on user input.
+Pokémon Details Page:
+Develop a details page that displays comprehensive information about a specific Pokémon, including its abilities, types, stats, and image.
+Apply CSS styling to enhance the presentation of Pokémon details and ensure readability.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Pokemon PokeSearch</title>
+
+<!-- Using bootsrap and linking css and js for display and user functionality -->
+        <link rel="stylesheet" href="CSS/PokemonAPI-MiniProj.css">
+        <script src="Scripts/PokemonAPI-MiniProj.js" defer></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </head>
+
+<!-- Implemented nav bar for search page and details page along with home page with navs to carousel and information -->
+<body class="background-image">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <h2 class="navbar-brand">Search Nav</h2>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                    <a class="nav-link active text-primary" aria-current="page" href="#carouselExampleDark">Slideshow</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="PokemonAPI-MiniProj.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Pages/Search.html">PokeSearch</a>
+                        </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="Pages/Details.html">Details</a>
+                    <li class="nav-item">
+                    <a class="nav-link text-success" href="#About Us">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link text-success" href="#Contact Info">Contact Info</a>
+                    </li>                                           
+                </ul>
+            </div>
+        </div>
+        </nav>
+
+<!-- Creating initial banner greeting across pages -->
+<div class="bg-image d-flex flex-column my-5 justify-content-center align-items-center" style="background-image: url('Pictures/PokemonBckgrndImg.avif'); height: 30vh;">
+    <h1 class="text-white">Pokemon Search</h1>
+    <h4 class="text-white">Welcome to your Pokemon SearchDex</h4>
+  </div>
+
+<!-- Setting card to center with page search linking -->
+    <div class="container" style="align-items: center; justify-content: center;">
+        <section class="my-5">
+            <div id="features" class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+                <div id="card" class="card mx-1 text-white border-light py-3" style="width: 35rem; height: 50rem; align-items: center; ">
+                    <img src="Pictures/PokemonSrchMnCrdImg.avif" style="width: 500px; height: 600px;" alt="Services 1">
+                <div class="card-body">
+
+<!-- Using js hover functionality along with letter manipulation -->
+<!-- for reference: https://stackoverflow.com/questions/17341670/change-color-of-one-character-in-a-text-box-html-css -->
+                    <h5 id="findButton" onmouseout="removeChangeColor()" onmouseover="changeColor()" class="card-title text-secondary">Search for your favorite P<span style="color: red">o</span>k<span style="color: red">e</span>m<span style="color: red">o</span>n<span style="color: red">!</span></h5>
+                    <a id="mainbutton" href="Pages/Search.html" class="btn btn-primary d-flex justify-content-center">Search Page</a>
+                </div>
+                </div>                 
+            </div>
+        </section>
+
+<!-- Adding Carousel to Home Page -->
+        <section class="container my-5">
+            <div id="carouselExampleDark" class="carousel carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="Pictures/PokemonCrslImg1.avif" style="width: 1400px; height: 700px;" class="d-block w-5" alt="service1">
+                    <div id="fs" class="carousel-caption d-none d-md-block">
+                      <h5 id="firstSlide">First slide label</h5>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="Pictures/PokemonCrslImg2.avif" style="width: 1400px; height: 700px;" class="d-block w-5 height" alt="service2">
+                    <div id="ss" class="carousel-caption d-none d-md-block">
+                      <h5 id="secondSlide">Second slide label</h5>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="Pictures/PokemonCrslImg3.avif" style="width: 1400px; height: 700px;" class="d-block w-5" alt="service3">
+                    <div id="ts" class="carousel-caption d-none d-md-block">
+                      <h5 id="thirdSlide">Third slide label</h5>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </section>
+
+<!-- Including About us and Contact Info on each page -->
+        <div id="About Us" class="container pt-2 text-light">
+            <section id="about" class="my-5">
+                <h2 class="text-light">About us</h2>
+            </div>
+
+                <div class="container row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col-12 col-md-4">
+                        <div>
+                            <h5 class="text-light">Side-Info</h5>
+                            <p class="text-light">Information regarding the company.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-8 mb-5">
+                        <div>
+                            <h5 class="text-light">Main-Info</h5>
+                            <p class="text-light">Information regarding this webpage.</p>
+                        </div>
+                    </div>              
+                </div>
+            </section>
+
+    </div>
+</div>
+
+    <hr class="mt-5">
+
+    <footer id="Contact Info" class="mx-2 py-3 mt-5 bg-dark">
+        <div class="row row-cols-1 row-cols-md-3 g-4 px-2">
+            <div class="col">
+                <div>
+                    <h6 class="text-light">Contact Info</h6>
+                    <p class="text-light">This is the contact info.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    <h6 class="text-light">Social Media Links</h6>
+                    <p class="text-light">These are the social media links.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    <h6 class="text-light">Newspaper signup form</h6>
+                    <p class="text-light">This is the Newspaper signup form.</p>
+                </div>
+            </div>                    
+        </div>
+
+        <div class="my-5 px-2">
+            <p class="text-light">&copy; 2025 PokeSearch Webpage. All rights reserved</p>
+            <address class="text-light"><i>Image References: https://unsplash.com/</i></address>
+        </div>
+    </footer>
+
+</body>
+</html>

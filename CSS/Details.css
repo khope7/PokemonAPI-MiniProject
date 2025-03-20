@@ -1,0 +1,23 @@
+/* Using image for webpage and card backgrounds */
+#detailsPage {
+    background-image: url(../Pictures/PokemonDtlsBckgrndImg.avif);
+}
+
+#card {
+    background-image: url(../Pictures/PokemonDtlsCrdImg.avif);
+}
+
+/* Adjusting font to catch for user all user case entries */
+#pokemon-info{
+    text-transform: uppercase;
+}
+
+#results{
+    text-align: center;
+}
+
+/* Creating rainbow glass for pokemon image clarity */
+#detailImage {
+    background-image: linear-gradient(to bottom right, rgba(25, 168, 32, 0.856), rgb(231, 231, 87), rgba(255, 0, 0, 0.295), rgba(39, 118, 236, 0.781), rgba(255, 0, 0, 0.295), rgba(255, 255, 0, 0.87), rgba(25, 168, 32, 0.856));
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.568);
+}
